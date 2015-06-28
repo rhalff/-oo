@@ -33,12 +33,13 @@ ruby_add_rdepend "
 	>=dev-ruby/childprocess-0.5
 	>=dev-ruby/rspec-2.14
 	>=dev-ruby/thor-0.18.1
+	>=dev-ruby/bundler
 "
 
 all_ruby_prepare() {
 	# remove bundler support
-	sed -i '/[Bb]undler/d' Rakefile || die
-	rm Gemfile || die
+	#sed -i '/[Bb]undler/d' Rakefile || die
+	#rm Gemfile || die
 
 #	epatch "${FILESDIR}"/${PN}-1.6.3-nfs.patch
 }
